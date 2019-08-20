@@ -7,6 +7,7 @@ class Login extends Component {
       super(props);
       this.login = this.login.bind(this);
       this.handleChange = this.handleChange.bind(this);
+      this.signup = this.signup.bind(this);
       this.state = {
         email:'',
         password:''
@@ -19,6 +20,14 @@ class Login extends Component {
       }).catch((error) => {
         console.log(error);
       });
+    }
+
+    signup(e){
+      e.preventDefault();
+      fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+      .catch((error) => {
+        console.log(error);
+      })
     }
 
     handleChange(e){
