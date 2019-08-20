@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import fire from './config/fire';
-
+import fire from './config/Fire';
+import Login from './Login';
+import Home from './Home';
 
 class App extends Component {
   constructor(props){
@@ -32,3 +33,5 @@ class App extends Component {
     )
   }
 }
+
+export default App;
